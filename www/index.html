@@ -70,6 +70,7 @@
                 
                 for(var key in drug_notifications){
                 var drug_name = drug_notifications[key]['drug_name'];
+                var drug_name_data_title = '#'+drug_name;
                 var expiry_date = drug_notifications[key]['expiry_date'];
                                 
                     var notification_parent_list = document.createElement('ul');
@@ -77,13 +78,14 @@
                     parent_panel.appendChild(notification_parent_list);
                         
                         var notification_list = document.createElement('li');
-                        notification_list.innerHTML = '<a href="#"'+drug_name+'>'+drug_name+'</a><br>';
+                        notification_list.innerHTML = '<a href='+drug_name_data_title+'>'+drug_name+'</a><br>';
                         notification_list.innerHTML += 'Expiry Date: '+expiry_date;
                         notification_parent_list.appendChild(notification_list);
         
+                    
                     var drug_panel = document.createElement('div');
                     drug_panel.className = 'panel';
-                    drug_panel.setAttribute('data-title',drug_name);
+                    drug_panel.setAttribute('data-title',drug_name_data_title);
                     drug_panel.setAttribute('id',drug_name);
                     drug_panel.innerHTML = drug_name + ' will expire on ' + expiry_date +'<br>'
                     drug_panel.innerHTML += 'This is the 1st alert<br>';
@@ -98,7 +100,7 @@
 //                        Please prescribe cautiously.
 //                    </p>
 //                </div>
-            }
+                }
             </script>    
 
 
