@@ -27,7 +27,7 @@
 
 <body>
 
-    <div id="splashscreen" class='ui-loader heavy'>
+    <div id="splashscreen" class='ui-loader light'>
         disposeMe
         <br>
         <br>
@@ -41,25 +41,11 @@
         </header>
 
         <div class="pages" id="pages">
-
-             <!--Initial List of items-->
-<!--
-            <div class="panel" data-title="Notifications" id="list" data-selected="true">
-              <ul class="list">
-                <li>
-                    <a href="#item1">Drug Name</a>
-                    <br>
-                    Expiry Date:
-                </li>
-              </ul>
-            </div>
--->
             <script>
             var pages = document.getElementById('pages');
                 
             // Detail View Pages for each list item --
-
-                
+     
                 // Set parent panel for the dryg on notifications list ---
                 var parent_panel = document.createElement('div');
                 parent_panel.className = 'panel';
@@ -81,7 +67,6 @@
                         notification_list.innerHTML = '<a href='+drug_name_data_title+'>'+drug_name+'</a><br>';
                         notification_list.innerHTML += 'Expiry Date: '+expiry_date;
                         notification_parent_list.appendChild(notification_list);
-        
                     
                     var drug_panel = document.createElement('div');
                     drug_panel.className = 'panel';
@@ -91,19 +76,8 @@
                     drug_panel.innerHTML += 'This is the 1st alert<br>';
                     drug_panel.innerHTML += 'Please prescribe cautiously';
                     pages.appendChild(drug_panel);
-//                <div class="panel" data-title="#{drug_name}" id="item1">
-//                    <p>
-//                        #{drug_name} will expire on #{expiry_date}
-//                        <br>
-//                        This is the #{1st} alert.
-//                        <br>
-//                        Please prescribe cautiously.
-//                    </p>
-//                </div>
                 }
-            </script>    
-
-
+            </script>
     </div>
 
 </body>
